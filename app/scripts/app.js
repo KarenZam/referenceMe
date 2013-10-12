@@ -7,7 +7,12 @@ angular.module('referenceMeApp', [])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/categories', {
+        templateUrl: 'views/categories.html',
+        controller: 'CategoriesCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
+
   });

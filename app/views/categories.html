@@ -1,0 +1,22 @@
+<button>
+	<a href = '/#/'>Home</a>
+</button>
+
+<div class="hero-unit" data-ng-init="initialize()" >
+ 
+<!-- selectedTag -->
+	<h1>List of selection according to selected tags :</h1>
+	<ul data-ng-repeat="item in allData | filter: {tag:selectedTag}">
+		<li>
+  			<a href={{item.url}} >{{item.url}} /br</a>
+  		</li>
+  		<li>
+  			<p>{{item.date}}</p>
+  			comment : <input type="text" ngModel="{string}" [name="{string}"] [ngMaxlength="{30}"]>
+			</input>
+  		</li>
+  	</ul>
+  
+</div>
+
+<!-- <li data-ng-repeat="item in allData | filter:'javascript'">{{item.url}}</li> -->
