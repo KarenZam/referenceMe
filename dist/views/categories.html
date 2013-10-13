@@ -1,11 +1,11 @@
 <button>
-	<a href="/#/">Home</a>
+	<a href="#/">Home</a>
 </button>
 
 <div class="hero-unit" data-ng-init="initialize()">
  
 <!-- selectedTag -->
-	<h1>List of selection according to selected tags :</h1>
+	<h1>List of selection according to selected tag "{{selectedTag}}" :</h1>
 
 	<ul data-ng-repeat="item in allData | filter: {tag:selectedTag}">
 		<li>
