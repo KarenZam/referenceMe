@@ -6,17 +6,18 @@
  
 <!-- selectedTag -->
 	<h1>List of selection according to selected tags :</h1>
+
 	<ul data-ng-repeat="item in allData | filter: {tag:selectedTag}">
 		<li>
   			<a href={{item.url}} >{{item.url}} /br</a>
-  		</li>
-  		<li>
+  	</li>
+  	<li>
   			<p>{{item.date}}</p>
-  			comment : <input type="text" ngModel="{string}" [name="{string}"] [ngMaxlength="{30}"]>
+  			comment ({{commentNbChar}}) : <input type="text" data-ng-Model="comment" name="input" data-ng-Maxlength="5">
 			</input>
-  		</li>
-  	</ul>
+      <p>input : {{comment}}</p>
+  	</li>
+  </ul>
   
 </div>
 
-<!-- <li data-ng-repeat="item in allData | filter:'javascript'">{{item.url}}</li> -->
